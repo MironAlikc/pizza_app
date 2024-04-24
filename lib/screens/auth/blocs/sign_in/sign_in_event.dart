@@ -14,6 +14,7 @@ class SignInRequired extends SignInEvent {
   const SignInRequired(this.email, this.password);
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [email, password];
 }
-class SignOutRequired extends SignInEvent{}
+
+class SignOutRequired extends SignInEvent {}

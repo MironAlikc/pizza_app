@@ -13,20 +13,19 @@ class MyTextField extends StatelessWidget {
   final String? errorMsg;
   final String? Function(String?)? onChanged;
 
-  const MyTextField({
-    super.key,
-    required this.controller,
-    required this.hintText,
-    required this.obscureText,
-    required this.keyboardType,
-    this.suffixIcon,
-    this.onTap,
-    this.prefixIcon,
-    this.validator,
-    this.focusNode,
-    this.errorMsg,
-    this.onChanged,
-  });
+  const MyTextField(
+      {super.key,
+      required this.controller,
+      required this.hintText,
+      required this.obscureText,
+      required this.keyboardType,
+      this.suffixIcon,
+      this.onTap,
+      this.prefixIcon,
+      this.validator,
+      this.focusNode,
+      this.errorMsg,
+      this.onChanged});
 
   @override
   Widget build(BuildContext context) {
@@ -47,13 +46,14 @@ class MyTextField extends StatelessWidget {
           borderSide: const BorderSide(color: Colors.transparent),
         ),
         focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-            borderSide:
-                BorderSide(color: Theme.of(context).colorScheme.secondary)),
+          borderRadius: BorderRadius.circular(20),
+          borderSide:
+              BorderSide(color: Theme.of(context).colorScheme.secondary),
+        ),
         fillColor: Colors.grey.shade200,
         filled: true,
         hintText: hintText,
-        hintStyle: TextStyle(color: Colors.green[500]),
+        hintStyle: TextStyle(color: Colors.grey[500]),
         errorText: errorMsg,
       ),
     );
